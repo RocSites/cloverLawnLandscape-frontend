@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Layout from './components/Layout';
+import SectionOne from './components/SectionOne';
+import { createTheme, ThemeProvider } from "@mui/material";
+
+const cloverTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#004b32"
+    },
+    secondary: {
+      main: "#44240a"
+    }
+  },
+});
+
 
 function App() {
   return (
+    <ThemeProvider theme={cloverTheme}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Layout>
+      <SectionOne/>
+     </Layout>
     </div>
+    </ThemeProvider>
+
   );
 }
 
