@@ -36,7 +36,7 @@ const withStyles = makeStyles(() => ({
         }
     },
     loginButton: {
-        backgroundColor: "#004b32",
+        backgroundColor: "#00704a",
         color: "white",
         borderRadius: "35px",
         height: "35px",

@@ -30,7 +30,7 @@ const withStyles = makeStyles((theme) => ({
     },
     sectionOneJoinButton: {
         // background: theme.palette.primary.main,
-        background: "#004b32",
+        background: "#00704a",
         color: "white",
         borderRadius: "20px",
         width: "200px",

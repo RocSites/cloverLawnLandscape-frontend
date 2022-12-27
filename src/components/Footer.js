@@ -3,7 +3,7 @@ import { Typography, makeStyles } from '@material-ui/core';
 
 const withStyles = makeStyles(() => ({
     footerWrapper: {
-        backgroundColor: "#004b32",
+        backgroundColor: "#00704a",
         height: "75px",
         display: "flex",
         justifyContent: "flex-start",

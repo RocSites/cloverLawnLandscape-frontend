@@ -3,11 +3,12 @@ import './App.css';
 import Layout from './components/Layout';
 import SectionOne from './components/SectionOne';
 import { createTheme, ThemeProvider } from "@mui/material";
+import SectionTwo from './components/SectionTwo';
 
 const cloverTheme = createTheme({
   palette: {
     primary: {
-      main: "#004b32"
+      main: "#00704a"
     },
     secondary: {
       main: "#44240a"
@@ -22,6 +23,7 @@ function App() {
     <div className="App">
      <Layout>
       <SectionOne/>
+      <SectionTwo/>
      </Layout>
     </div>
     </ThemeProvider>
