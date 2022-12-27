@@ -15,7 +15,8 @@ const withStyles = makeStyles(() => ({
         height: "75px",
         position: "fixed",
         top: 0,
-        width: "100%"
+        width: "100%",
+        zIndex: "2"
     },
     navbarImage: {
         width: "200px",
