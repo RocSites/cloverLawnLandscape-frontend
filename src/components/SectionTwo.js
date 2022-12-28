@@ -35,6 +35,12 @@ const withStyles = makeStyles(() => ({
         fontWeight: "bold",
         textTransform: "uppercase"
     },
+    sectionTwoTextHover: {
+        fontSize: "1.75rem",
+        color: "black",
+        fontWeight: "bold",
+        textTransform: "uppercase"
+    },
     sectionTwoHeaderWrapper: {
         display: "flex",
         flexDirection: "column",
@@ -78,10 +84,10 @@ const withStyles = makeStyles(() => ({
         transform: "translate(-50%, -50%)",
         width: "100%",
         height: "100%",
-        background: "#aca3a3",
+        background: "#00704a",
     },
     servicesListWrapper: {
-        color: "black",
+        color: "white",
         textAlign: "left",
         marginBlockStart: 0,
         paddingInlineStart: "30px",
@@ -128,12 +134,15 @@ const SectionTwo = () => {
                     onClick={handleShowServicesDetail("hardscaping", true)}
                 >
                     <img className={classes.sectionTwoImage} src={PatioFireThree} />
+                    {/* TODO add slide up css instead of flash toggle for service details */}
+                    {/* TODO make mobile responsive  */}
                     {showHardScapeText === false ? (
                         <div className={classes.centerText}>
                             <Typography className={classes.sectionTwoText}>Hardscaping</Typography>
                         </div>
                     ) : (
                         <div className={classes.centerTextOverlay}>
+                            {/* <Typography className={classes.sectionTwoTextHover}>Hardscaping</Typography> */}
                             <ul className={classes.servicesListWrapper}>
                                 <li>Flagstone and pavers of all styles</li>
                                 <li>Patios and walks</li>
@@ -182,7 +191,7 @@ const SectionTwo = () => {
                     <img className={classes.sectionTwoImage} src={PatioFireThree} />
                     {showMaintenanceText === false ? (
                         <div className={classes.centerText}>
-                            <Typography className={classes.sectionTwoText}>Landscaping</Typography>
+                            <Typography className={classes.sectionTwoText}>Maintenance</Typography>
                         </div>
                     ) : (
                         <div className={classes.centerTextOverlay}>
