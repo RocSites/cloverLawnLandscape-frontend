@@ -1,5 +1,6 @@
 import { Typography, makeStyles } from '@material-ui/core';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { clsx } from 'clsx';
 import CloverIconWhite from '../assets/icon_clover_white.png'
 import PatioFireThree from '../assets/patio_fire_three.jpeg'
 
@@ -69,8 +70,24 @@ const withStyles = makeStyles(() => ({
         transform: "translate(-50%, -50%)",
         width: "100%"
     },
+    centerTextOverlay: {
+        position: "absolute",
+        display: "flex",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: "100%",
+        height: "100%",
+        background: "#aca3a3",
+    },
     servicesListWrapper: {
-        color: "white"
+        color: "black",
+        textAlign: "left",
+        marginBlockStart: 0,
+        paddingInlineStart: "30px",
+        "& li": {
+            margin: "15px 0"
+        }
     }
 
 }));
@@ -86,16 +103,14 @@ const SectionTwo = () => {
 
     // TODO - fix hover state mixup on second and third tiles
     // TODO - add clsx for when service details are displayed (add gray/white color and background). Add scroll up for this transition later
-    const handleShowServicesDetail = (e) => {
-        console.log(e.target.id)
-        console.log("landscaping state", showLandscapingText)
-        let serviceName = e.target.id;
+    const handleShowServicesDetail = (serviceName, enabled) => (e) => {
+        console.log(serviceName);
         if (serviceName === "hardscaping") {
-            setShowHardScapeText(value => !value)
+            setShowHardScapeText(enabled)
         } else if (serviceName === "landscaping") {
-            setShowLandscapingText(value => !value)
+            setShowLandscapingText(enabled)
         } else if (serviceName === "maintenance") {
-            setMaintenanceText(value => !value)
+            setMaintenanceText(enabled)
         }
     }
 
@@ -107,11 +122,18 @@ const SectionTwo = () => {
                 </div>
             </div>
             <div className={classes.sectionTwoContentWrapper}>
-                {/* cleanup click event to only render on mobile */}
-                <div className={classes.sectionTwoContentTextWrapper} onMouseEnter={handleShowServicesDetail} onMouseLeave={handleShowServicesDetail} onClick={handleShowServicesDetail} >
-                    <img id="hardscaping" className={classes.sectionTwoImage} src={PatioFireThree} />
-                    <div className={classes.centerText}>
-                        {showHardScapeText === false ? <Typography className={classes.sectionTwoText}>Hardscaping</Typography> : (
+                <div className={classes.sectionTwoContentTextWrapper}
+                    onMouseEnter={handleShowServicesDetail("hardscaping", true)}
+                    onMouseLeave={handleShowServicesDetail("hardscaping", false)}
+                    onClick={handleShowServicesDetail("hardscaping", true)}
+                >
+                    <img className={classes.sectionTwoImage} src={PatioFireThree} />
+                    {showHardScapeText === false ? (
+                        <div className={classes.centerText}>
+                            <Typography className={classes.sectionTwoText}>Hardscaping</Typography>
+                        </div>
+                    ) : (
+                        <div className={classes.centerTextOverlay}>
                             <ul className={classes.servicesListWrapper}>
                                 <li>Flagstone and pavers of all styles</li>
                                 <li>Patios and walks</li>
@@ -119,15 +141,21 @@ const SectionTwo = () => {
                                 <li>Retaining walls</li>
                                 <li>Steps, stoops, and landings</li>
                             </ul>
-                        )}
-                    </div>
-
-
+                        </div>
+                    )}
                 </div>
-                <div className={classes.sectionTwoContentTextWrapper} onMouseEnter={handleShowServicesDetail} onMouseLeave={handleShowServicesDetail} onClick={handleShowServicesDetail}>
+                <div className={classes.sectionTwoContentTextWrapper}
+                    onMouseEnter={handleShowServicesDetail("landscaping", true)}
+                    onMouseLeave={handleShowServicesDetail("landscaping", false)}
+                    onClick={handleShowServicesDetail("landscaping", true)}
+                >
                     <img id="landscaping" className={classes.sectionTwoImage} src={PatioFireThree} />
-                    <div className={classes.centerText}>
-                        {showLandscapingText === false ? <Typography className={classes.sectionTwoText}>Landscaping</Typography> : (
+                    {showLandscapingText === false ? (
+                        <div className={classes.centerText}>
+                            <Typography className={classes.sectionTwoText}>Landscaping</Typography>
+                        </div>
+                    ) : (
+                        <div className={classes.centerTextOverlay}>
                             <ul className={classes.servicesListWrapper}>
                                 <li>Walkways</li>
                                 <li>Permanent outdoor seating</li>
@@ -136,18 +164,28 @@ const SectionTwo = () => {
                                 <li>Swimming pools/Hot tubs</li>
                                 <li>Sun/Shade areas</li>
                                 <li>Water features</li>
+
+                            </ul>
+                            <ul className={classes.servicesListWrapper}>
                                 <li>Bird watching</li>
                                 <li>Screening</li>
                                 <li>Wind breaks</li>
                                 <li>Lawns</li>
                             </ul>
-                        )}
-                    </div>
+                        </div>
+                    )}
                 </div>
-                <div className={classes.sectionTwoContentTextWrapper} onMouseEnter={handleShowServicesDetail} onMouseLeave={handleShowServicesDetail} onClick={handleShowServicesDetail}>
-                    <img id="maintenance" className={classes.sectionTwoImage} src={PatioFireThree} />
-                    <div className={classes.centerText}>
-                        {showMaintenanceText === false ? <Typography className={classes.sectionTwoText}>Maintenance</Typography> : (
+                <div className={classes.sectionTwoContentTextWrapper}
+                    onMouseEnter={handleShowServicesDetail("maintenance", true)}
+                    onMouseLeave={handleShowServicesDetail("maintenance", false)}
+                    onClick={handleShowServicesDetail("maintenance", true)}>
+                    <img className={classes.sectionTwoImage} src={PatioFireThree} />
+                    {showMaintenanceText === false ? (
+                        <div className={classes.centerText}>
+                            <Typography className={classes.sectionTwoText}>Landscaping</Typography>
+                        </div>
+                    ) : (
+                        <div className={classes.centerTextOverlay}>
                             <ul className={classes.servicesListWrapper}>
                                 <li>Seasonal mowing and plowing</li>
                                 <li>Lawn fertilization and weed control</li>
@@ -155,8 +193,8 @@ const SectionTwo = () => {
                                 <li>Tree and shrub pruning</li>
                                 <li>Large tree take-downs and disposals</li>
                             </ul>
-                        )}
-                    </div>
+                        </div>
+                    )}
                 </div>
 
             </div>

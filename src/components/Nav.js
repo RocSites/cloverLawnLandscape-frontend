@@ -12,7 +12,6 @@ const withStyles = makeStyles(() => ({
         display: "flex",
         justifyContent: "space-between",
         background: "#ffffff",
-        height: "75px",
         position: "fixed",
         top: 0,
         width: "100%",
