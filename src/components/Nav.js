@@ -6,6 +6,7 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 const withStyles = makeStyles(() => ({
     navbarWrapper: {
@@ -35,12 +36,13 @@ const withStyles = makeStyles(() => ({
             fontSize: "1rem"
         }
     },
-    loginButton: {
+    contactUsButton: {
         backgroundColor: "#00704a",
         color: "white",
         borderRadius: "35px",
         height: "35px",
         margin: "auto",
+        padding: "20px",
         marginRight: "10px",
         "&:hover": {
             backgroundColor: "#6db0a7",
@@ -50,7 +52,7 @@ const withStyles = makeStyles(() => ({
             fontSize: "1rem;"
         }
     },
-    loginButtonMobile: {
+    contactUsButtonMobile: {
         "& span": {
             color: "white",
         }
@@ -149,8 +151,8 @@ const Nav = () => {
                 {/* TODO update handleClick id to new section name */}
                 <Button onClick={() => handleClick('#howItWorks')} className={classes.menuItem}>Services</Button>
                 <Button onClick={() => handleClick('#howItWorks')} className={classes.menuItem}>Gallery</Button>
-                <Button className={classes.menuItem}>About</Button>
-                <Button target="_blank" href="" className={classes.loginButton}>Contact Us</Button>
+                <Button className={classes.menuItem}>About Us</Button>
+                <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon/>&nbsp; Contact Us</Button>
             </div>
             <div className={classes.navBarHamburgerDrawerWrapper}>
                 <MenuIcon
@@ -189,7 +191,7 @@ const Nav = () => {
                                 button
                                 onClick={() => handleClick('#howItWorks')}
                             >
-                                <ListItemText primary={"About"} />
+                                <ListItemText primary={"About Us"} />
                             </ListItem>
                             <Button
                                 className={classes.drawerItemLogin}

@@ -4,6 +4,8 @@ import Layout from './components/Layout';
 import SectionOne from './components/SectionOne';
 import { createTheme, ThemeProvider } from "@mui/material";
 import SectionTwo from './components/SectionTwo';
+import SectionThree from './components/SectionThree';
+import SectionFour from './components/SectionFour';
 
 const cloverTheme = createTheme({
   palette: {
@@ -24,6 +26,8 @@ function App() {
      <Layout>
       <SectionOne/>
       <SectionTwo/>
+      <SectionThree/>
+      <SectionFour/>
      </Layout>
     </div>
     </ThemeProvider>

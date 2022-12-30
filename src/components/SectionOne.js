@@ -77,6 +77,7 @@ const SectionOne = () => {
                 <Typography className={classes.sectionOneHeader}>Award-winning Landscaping 
                 </Typography>
                 <Typography className={classes.sectionOneSubheader}>Outdoor spaces, designed and executed just for you by our talented team of landscape architects and construction professionals.</Typography>
+                {/* TODO - add phone icon if single contact number, if multiple numbers (need client clarification) then scroll to "Contact Us" section */}
                 <Button target="_blank" href="" className={classes.sectionOneJoinButton}>Contact Us</Button>
             </div>
             <div className={classes.bannerImageWrapper}>
