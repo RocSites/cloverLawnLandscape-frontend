@@ -45,7 +45,7 @@ const withStyles = makeStyles(() => ({
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
-        minWidth: "40%",
+        width: "100%",
         color: "white",
         maxHeight: "500px"
     },
@@ -60,7 +60,6 @@ const withStyles = makeStyles(() => ({
         zIndex: "1"
     },
     sectionTwoHeaderTextWrapper: {
-        display: "flex",
         margin: "0px 0 50px 0"
     },
     sectionTwoContentTextWrapper: {
