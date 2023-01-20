@@ -21,7 +21,7 @@ const withStyles = makeStyles(() => ({
     sectionTwoHeader: {
         fontWeight: "bold",
         fontSize: "3rem",
-        textAlign: "left",
+        textAlign: "right",
         "& > span": {
             color: "#00704a"
         },
@@ -45,7 +45,6 @@ const withStyles = makeStyles(() => ({
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
-        width: "100%",
         color: "white",
         maxHeight: "500px"
     },
@@ -60,6 +59,7 @@ const withStyles = makeStyles(() => ({
         zIndex: "1"
     },
     sectionTwoHeaderTextWrapper: {
+        display: "flex",
         margin: "0px 0 50px 0"
     },
     sectionTwoContentTextWrapper: {

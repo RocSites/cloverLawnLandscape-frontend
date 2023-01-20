@@ -5,7 +5,7 @@ const withStyles = makeStyles(() => ({
   sectionThreeWrapper: {
     display: "flex",
     flexDirection: "column",
-    background: "#00704a",
+    // background: "#00704a",
     height: "500px",
     padding: "5% 14% 5% 14%",
     margin: "auto"
@@ -14,7 +14,7 @@ const withStyles = makeStyles(() => ({
     display: "flex",
     margin: "0px 0 50px 0",
     justifyContent: "center",
-    color: "white"
+    color: "black"
   },
   sectionThreeHeader: {
     fontWeight: "bold",
