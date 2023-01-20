@@ -22,6 +22,7 @@ const withStyles = makeStyles(() => ({
         fontWeight: "bold",
         fontSize: "3rem",
         textAlign: "right",
+        color: "white",
         "& > span": {
             color: "#00704a"
         },

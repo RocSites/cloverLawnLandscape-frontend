@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import SectionTwo from './components/SectionTwo';
 import SectionThree from './components/SectionThree';
 import AboutUs from './components/AboutUs';
+import Services from './components/Services';
 
 const cloverTheme = createTheme({
   palette: {
@@ -25,8 +26,9 @@ function App() {
       <div className="App">
         <Layout>
           <SectionOne />
-          <SectionTwo />
           <AboutUs />
+          <SectionTwo />
+          <Services/>
           <SectionThree />
         </Layout>
       </div>

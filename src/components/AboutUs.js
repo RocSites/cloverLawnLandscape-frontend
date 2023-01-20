@@ -36,13 +36,8 @@ const AboutUs = () => {
       </div>
       <div>
         <div>
-          <p className={classes.aboutUsParagraph}>
-            Many landscape companies provide select components of landscape services.
-            Some mow lawns, some install walks and others just sell plants. What makes Clover Lawn & Landscape unique is the ability to encompass all of your
-            landscape needs under one company's management. This helps to eliminate the need of coordinating three or four various companies to maintain your property
-          </p>
           <p className={classes.aboutUsParagraph}>At Clover Lawn & Landscape, we strive to create gardens that dazzle the eye and nurture the soul. We accomplish our mission by being attentive to our
-            client's needs and desires, by using our superior horticultural knowledge and creative design capabilities, and through our attention to details.</p>
+            client's needs and desires. Utilizing our horticultural knowledge,  creative design capabilities, and our attention to details.</p>
         </div>
       </div>
       <div>
