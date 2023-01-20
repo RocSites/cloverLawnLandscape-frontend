@@ -19,10 +19,17 @@ const withStyles = makeStyles((theme) => ({
         fontWeight: "bold",
         fontSize: "3rem",
         textAlign: "left",
-        marginBottom: "20px",
         "@media(max-width: 600px)": {
             fontSize: "2rem"
         }
+    },
+    sectionOneHeaderLower: {
+        fontSize: "2rem",
+        textAlign: "left",
+        marginBottom: "20px",
+        color: "#00704a",
+        fontWeight: "500",
+        fontStyle: "italic"
     },
     sectionOneSubheader: {
         fontSize: "1rem",
@@ -74,8 +81,9 @@ const SectionOne = () => {
     return (
         <div className={classes.sectionOneWrapper}>
             <div className={classes.bannerContentWrapper}>
-                <Typography className={classes.sectionOneHeader}>Award-winning Landscaping 
+                <Typography className={classes.sectionOneHeader}>Award-winning landscaping
                 </Typography>
+                <Typography  className={classes.sectionOneHeaderLower}>right around the corner</Typography>
                 <Typography className={classes.sectionOneSubheader}>Outdoor spaces, designed and executed just for you by our talented team of landscape architects and construction professionals.</Typography>
                 {/* TODO - add phone icon if single contact number, if multiple numbers (need client clarification) then scroll to "Contact Us" section */}
                 <Button target="_blank" href="" className={classes.sectionOneJoinButton}>Contact Us</Button>

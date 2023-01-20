@@ -51,6 +51,21 @@ const Services = () => {
                     to construction to maintenance services, we've got your project covered; one call does it all. Our services include:
                 </p>
             </div>
+            <div> Services list - TODO
+                <p>
+                    Custom landscape design
+                    Complete landscape renovations
+                    Installations of walkways and patios (flagstone and all styles of pavers)
+                    Retaining walls of all styles
+                    Landscape lighting
+                    Expert landscape installation
+                    Custom water features
+                    Sod installation Gardening and maintenance
+                    Complete tree service
+                    Fully staffed retail nursery and garden center
+                    Grading and drainage systems
+                </p>
+            </div>
         </div>
     )
 }
