@@ -149,9 +149,9 @@ const Nav = () => {
             </div>
             <div className={classes.navbarMenuWrapper}>
                 {/* TODO update handleClick id to new section name */}
-                <Button onClick={() => handleClick('#howItWorks')} className={classes.menuItem}>Services</Button>
-                <Button onClick={() => handleClick('#howItWorks')} className={classes.menuItem}>Gallery</Button>
-                <Button className={classes.menuItem}>About Us</Button>
+                <Button onClick={() => handleClick('#services')} className={classes.menuItem}>Services</Button>
+                <Button onClick={() => handleClick('#gallery')} className={classes.menuItem}>Gallery</Button>
+                <Button onClick={() => handleClick('#aboutUs')} className={classes.menuItem}>About Us</Button>
                 <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon/>&nbsp; Contact Us</Button>
             </div>
             <div className={classes.navBarHamburgerDrawerWrapper}>

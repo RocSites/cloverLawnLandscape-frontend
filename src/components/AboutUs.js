@@ -29,7 +29,7 @@ const AboutUs = () => {
 
   const classes = withStyles();
   return (
-    <div className={classes.aboutUsWrapper}>
+    <div id="aboutUs" className={classes.aboutUsWrapper}>
       <div className={classes.aboutHeaderWrapper}>
         <Typography className={classes.aboutUsHeader}>A Family-Owned Business</Typography>
         <Typography className={classes.aboutUsHeader}>Serving Rochester</Typography>

@@ -40,7 +40,8 @@ const withStyles = makeStyles(() => ({
         }
     },
     servicesListWrapper: {
-        display: "flex"
+        display: "flex",
+        // justifyContent: "center"
     }
 
 }));
@@ -48,7 +49,7 @@ const Services = () => {
 
     const classes = withStyles();
     return (
-        <div className={classes.servicesWrapper}>
+        <div id="services" className={classes.servicesWrapper}>
             <div className={classes.servicesHeaderTextWrapper}>
                 <Typography className={classes.servicesHeader}>Our Services</Typography>
             </div>

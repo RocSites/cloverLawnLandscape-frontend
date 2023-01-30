@@ -1,14 +1,18 @@
 import React from 'react'
 import { Button, Typography, makeStyles } from '@material-ui/core';
-// import OrganizeOne from '../assets/organizationPeace.svg'
-
+// import GrassBackground from '../assets/chang-qing-grass.jpg'
+import GrassBackground from '../assets/petar-tonchev-c-5-QE5kBYk-unsplash.jpg'
 const withStyles = makeStyles((theme) => ({
     sectionOneWrapper: {
         display: "flex",
         alignItems: "center",
-        background: "#ffffff",
-        height: "650px",
+        // background: "#ffffff",
+        height: "100vh",
         marginTop: "40px",
+        backgroundImage: `url(${GrassBackground})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPositionY: "90%",
         padding: "0px 14% 0 14%",
         "@media(max-width: 600px)": {
             flexDirection: "column",
@@ -19,6 +23,8 @@ const withStyles = makeStyles((theme) => ({
         fontWeight: "bold",
         fontSize: "3rem",
         textAlign: "left",
+        color: "white",
+        textTransform: "uppercase",
         "@media(max-width: 600px)": {
             fontSize: "2rem"
         }
@@ -32,8 +38,9 @@ const withStyles = makeStyles((theme) => ({
         fontStyle: "italic"
     },
     sectionOneSubheader: {
-        fontSize: "1rem",
-        textAlign: "left"
+        fontSize: "1.25rem",
+        textAlign: "left",
+        color: "green"
     },
     sectionOneJoinButton: {
         // background: theme.palette.primary.main,
@@ -81,10 +88,10 @@ const SectionOne = () => {
     return (
         <div className={classes.sectionOneWrapper}>
             <div className={classes.bannerContentWrapper}>
-                <Typography className={classes.sectionOneHeader}>Award-winning landscaping
+                <Typography className={classes.sectionOneHeader}>Award-Winning Landscaping
                 </Typography>
-                <Typography  className={classes.sectionOneHeaderLower}>right around the corner</Typography>
-                <Typography className={classes.sectionOneSubheader}>Outdoor spaces, designed and executed just for you by our talented team of landscape architects and construction professionals.</Typography>
+                {/* <Typography  className={classes.sectionOneHeaderLower}>right around the corner</Typography> */}
+                {/* <Typography className={classes.sectionOneSubheader}>Outdoor Spaces - designed and executed just for you by our talented team of landscape architects and construction professionals.</Typography> */}
                 {/* TODO - add phone icon if single contact number, if multiple numbers (need client clarification) then scroll to "Contact Us" section */}
                 <Button target="_blank" href="" className={classes.sectionOneJoinButton}>Contact Us</Button>
             </div>

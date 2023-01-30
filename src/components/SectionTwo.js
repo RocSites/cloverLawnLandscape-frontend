@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react'
 import { clsx } from 'clsx';
 import CloverIconWhite from '../assets/icon_clover_white.png'
 import PatioFireThree from '../assets/patio_fire_three.jpeg'
+import RockWallMultch from '../assets/rockwall_multch.jpeg'
+import PatioFire from '../assets/pation_fire_two.jpeg'
+import WallThree from '../assets/wall_three.jpeg'
 
 const withStyles = makeStyles(() => ({
     sectionTwoWrapper: {
@@ -21,7 +24,6 @@ const withStyles = makeStyles(() => ({
     sectionTwoHeader: {
         fontWeight: "bold",
         fontSize: "3rem",
-        textAlign: "right",
         color: "white",
         "& > span": {
             color: "#00704a"
@@ -61,6 +63,7 @@ const withStyles = makeStyles(() => ({
     },
     sectionTwoHeaderTextWrapper: {
         display: "flex",
+        flexDirection: "column",
         margin: "0px 0 50px 0"
     },
     sectionTwoContentTextWrapper: {
@@ -94,6 +97,11 @@ const withStyles = makeStyles(() => ({
         "& li": {
             margin: "15px 0"
         }
+    },
+    sectionOneSubheader: {
+        fontSize: "1.25rem",
+        textAlign: "left",
+        color: "white"
     }
 
 }));
@@ -124,7 +132,8 @@ const SectionTwo = () => {
         <div className={classes.sectionTwoWrapper}>
             <div className={classes.sectionTwoHeaderWrapper}>
                 <div className={classes.sectionTwoHeaderTextWrapper}>
-                    <Typography className={classes.sectionTwoHeader}>Transform your<span>&nbsp;Space</span></Typography>
+                    <Typography className={classes.sectionTwoHeader}>Outdoor<span>&nbsp;Spaces</span></Typography>
+                    <Typography className={classes.sectionOneSubheader}>Designed and executed just for you by our talented team of landscape architects and construction professionals.</Typography>
                 </div>
             </div>
             <div className={classes.sectionTwoContentWrapper}>
@@ -133,7 +142,7 @@ const SectionTwo = () => {
                     onMouseLeave={handleShowServicesDetail("hardscaping", false)}
                     onClick={handleShowServicesDetail("hardscaping", true)}
                 >
-                    <img className={classes.sectionTwoImage} src={PatioFireThree} />
+                    <img className={classes.sectionTwoImage} src={WallThree} />
                     {/* TODO add slide up css instead of flash toggle for service details */}
                     {/* TODO make mobile responsive  */}
                     {showHardScapeText === false ? (
@@ -158,7 +167,7 @@ const SectionTwo = () => {
                     onMouseLeave={handleShowServicesDetail("landscaping", false)}
                     onClick={handleShowServicesDetail("landscaping", true)}
                 >
-                    <img id="landscaping" className={classes.sectionTwoImage} src={PatioFireThree} />
+                    <img id="landscaping" className={classes.sectionTwoImage} src={PatioFire} />
                     {showLandscapingText === false ? (
                         <div className={classes.centerText}>
                             <Typography className={classes.sectionTwoText}>Landscaping</Typography>
@@ -188,7 +197,7 @@ const SectionTwo = () => {
                     onMouseEnter={handleShowServicesDetail("maintenance", true)}
                     onMouseLeave={handleShowServicesDetail("maintenance", false)}
                     onClick={handleShowServicesDetail("maintenance", true)}>
-                    <img className={classes.sectionTwoImage} src={PatioFireThree} />
+                    <img className={classes.sectionTwoImage} src={RockWallMultch} />
                     {showMaintenanceText === false ? (
                         <div className={classes.centerText}>
                             <Typography className={classes.sectionTwoText}>Maintenance</Typography>
