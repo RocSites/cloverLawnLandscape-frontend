@@ -1,14 +1,24 @@
 import logo from './logo.svg';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import './App.css';
 import Layout from './components/Layout';
 import SectionOne from './components/SectionOne';
-import { createTheme, ThemeProvider } from "@mui/material";
 import SectionTwo from './components/SectionTwo';
 import SectionThree from './components/SectionThree';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 
-const cloverTheme = createTheme({
+const cloverTheme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Nunito',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif'
+    ].join(',')
+  },
   palette: {
     primary: {
       main: "#00704a"
@@ -28,7 +38,7 @@ function App() {
           <SectionOne />
           <AboutUs />
           <SectionTwo />
-          <Services/>
+          <Services />
           <SectionThree />
         </Layout>
       </div>

@@ -25,9 +25,7 @@ const withStyles = makeStyles(() => ({
         fontWeight: "bold",
         fontSize: "3rem",
         color: "white",
-        "& > span": {
-            color: "#00704a"
-        },
+        textTransform: "uppercase",
         "@media(max-width: 600px)": {
             fontSize: "2rem"
         }

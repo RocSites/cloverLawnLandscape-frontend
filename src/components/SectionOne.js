@@ -21,7 +21,7 @@ const withStyles = makeStyles((theme) => ({
     },
     sectionOneHeader: {
         fontWeight: "bold",
-        fontSize: "3rem",
+        fontSize: "3.5rem",
         textAlign: "left",
         color: "white",
         textTransform: "uppercase",

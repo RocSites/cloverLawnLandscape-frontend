@@ -25,6 +25,7 @@ const withStyles = makeStyles(() => ({
   sectionThreeHeader: {
     fontWeight: "bold",
     fontSize: "3rem",
+    textTransform: "uppercase",
     "& > span": {
       color: "#00704a"
     },

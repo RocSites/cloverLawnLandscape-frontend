@@ -18,6 +18,7 @@ const withStyles = makeStyles(() => ({
         fontWeight: "bold",
         fontSize: "3rem",
         color: "white",
+        textTransform: "uppercase",
         "& > span": {
             color: "#00704a"
         },
@@ -35,6 +36,7 @@ const withStyles = makeStyles(() => ({
     servicesListUl: {
         color: "white",
         textAlign: "left",
+        fontFamily: "Nunito",
         "& li": {
             margin: "15px 0"
         }
@@ -54,11 +56,11 @@ const Services = () => {
                 <Typography className={classes.servicesHeader}>Our Services</Typography>
             </div>
             <div className={classes.servicesDescriptionWrapper}>
-                <p className={classes.servicesParagraph}>Many landscape companies provide select components of landscape services. Some mow lawns, some install walks and others just sell plants.
+                <Typography className={classes.servicesParagraph}>Many landscape companies provide select components of landscape services. Some mow lawns, some install walks and others just sell plants.
                     What makes Clover Lawn & Landscape unique is the ability to encompass all of your landscape needs under one company's management.
                     This helps to eliminate the need of coordinating three or four various companies to maintain your property. So from landscape design to plant selection
                     to construction to maintenance services, we've got your project covered; one call does it all.
-                </p>
+                </Typography>
             </div>
             <div className={classes.servicesListWrapper}>
                 <ul className={classes.servicesListUl}>

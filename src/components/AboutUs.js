@@ -12,7 +12,8 @@ const withStyles = makeStyles(() => ({
     fontSize: "3rem",
     fontWeight: "bold",
     color: "white",
-    textAlign: "left"
+    textAlign: "left",
+    textTransform: "uppercase"
   },
   aboutHeaderWrapper: {
     display: "flex", 
@@ -21,7 +22,8 @@ const withStyles = makeStyles(() => ({
   aboutUsParagraph: {
     textAlign: "left",
     lineHeight: 2,
-    color: "white"
+    color: "white",
+    margin: "10px 0"
   }
 
 }));
@@ -36,20 +38,20 @@ const AboutUs = () => {
       </div>
       <div>
         <div>
-          <p className={classes.aboutUsParagraph}>At Clover Lawn & Landscape, we strive to create gardens that dazzle the eye and nurture the soul. We accomplish our mission by being attentive to our
-            client's needs and desires. Utilizing our horticultural knowledge,  creative design capabilities, and our attention to details.</p>
+          <Typography className={classes.aboutUsParagraph}>At Clover Lawn & Landscape, we strive to create gardens that dazzle the eye and nurture the soul. We accomplish our mission by being attentive to our
+            client's needs and desires. Utilizing our horticultural knowledge,  creative design capabilities, and our attention to details.</Typography>
         </div>
       </div>
       <div>
         <div>
-          <p className={classes.aboutUsParagraph}>
+          <Typography className={classes.aboutUsParagraph}>
             In 1978 the Lechner family of Rochester, NY decided they wanted to enroll their sons in Brighton's Mcquaid Jesuit School. As a way to offset the tuition,
             Tom, Pat, Doug and Geoff started mowing neighborhood lawns for extra income. As time went on the number of lawn mowing accounts began to blossom. Opportunities
             within the landscape area increased with the request to do various other projects for their clients. An entrepreneurial spirit began to develop among the brothers.
             With each job the need to learn more about landscaping industry grew.
-          </p>
-          <p className={classes.aboutUsParagraph}>After 30+ years in business, we pride ourselves on the fact that a high percentage of our work is repeat requests from past clients and referrals.
-          </p>
+          </Typography>
+          <Typography className={classes.aboutUsParagraph}>After 30+ years in business, we pride ourselves on the fact that a high percentage of our work is repeat requests from past clients and referrals.
+          </Typography>
         </div>
       </div>
     </div>

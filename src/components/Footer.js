@@ -9,7 +9,7 @@ const withStyles = makeStyles(() => ({
         justifyContent: "flex-start",
         alignItems: "center"
     },
-    educeCopyright: {
+    cloverCopyright: {
         color: "white",
         textAlign: "left",
         marginLeft: "15px"
@@ -22,7 +22,7 @@ const Footer = () => {
     const classes = withStyles();
     return (
         <div className={classes.footerWrapper}>
-            <Typography className={classes.educeCopyright}> &copy; {new Date().getFullYear()} Clover Lawn & Landscape. All Rights Reserved.</Typography>
+            <Typography className={classes.cloverCopyright}> &copy; {new Date().getFullYear()} Clover Lawn & Landscape. All Rights Reserved.</Typography>
         </div>
     )
 }
