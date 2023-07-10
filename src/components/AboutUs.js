@@ -6,14 +6,20 @@ const withStyles = makeStyles(() => ({
     display: "flex",
     flexDirection: "column",
     background: "#00704a",
-    padding: "5% 14% 5% 14%"
+    padding: "5% 14% 5% 14%",
+    "@media(max-width: 600px)": {
+      padding: "40% 14% 5% 14%",
+  }
   },
   aboutUsHeader: {
     fontSize: "3rem",
     fontWeight: "bold",
     color: "white",
     textAlign: "left",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    "@media(max-width: 600px)": {
+      fontSize: "2rem"
+  }
   },
   aboutHeaderWrapper: {
     display: "flex", 

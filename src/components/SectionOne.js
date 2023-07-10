@@ -16,7 +16,9 @@ const withStyles = makeStyles((theme) => ({
         padding: "0px 14% 0 14%",
         "@media(max-width: 600px)": {
             flexDirection: "column",
-            paddingTop: "100px"
+            paddingTop: "50%",
+            padding: "0px 10% 0 10%",
+
         }
     },
     sectionOneHeader: {
@@ -85,15 +87,20 @@ const SectionOne = () => {
 
     const classes = withStyles();
 
+    const handleClick = (id) => {
+        const section = document.querySelector(id);
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     return (
-        <div className={classes.sectionOneWrapper}>
+        <div id="sectionOne" className={classes.sectionOneWrapper}>
             <div className={classes.bannerContentWrapper}>
                 <Typography className={classes.sectionOneHeader}>Award-Winning Landscaping
                 </Typography>
                 {/* <Typography  className={classes.sectionOneHeaderLower}>right around the corner</Typography> */}
                 {/* <Typography className={classes.sectionOneSubheader}>Outdoor Spaces - designed and executed just for you by our talented team of landscape architects and construction professionals.</Typography> */}
                 {/* TODO - add phone icon if single contact number, if multiple numbers (need client clarification) then scroll to "Contact Us" section */}
-                <Button target="_blank" href="" className={classes.sectionOneJoinButton}>Contact Us</Button>
+                <Button onClick={() => handleClick('#contactUs')} className={classes.sectionOneJoinButton}>Contact Us</Button>
             </div>
             <div className={classes.bannerImageWrapper}>
                 {/* <img className={classes.bannerImage} src={OrganizeOne} /> */}

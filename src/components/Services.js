@@ -6,8 +6,11 @@ const withStyles = makeStyles(() => ({
         display: "flex",
         flexDirection: "column",
         background: "#00704a",
-        padding: "5% 14% 5% 14%",
-        margin: "auto"
+        padding: "15% 14% 5% 14%",
+        margin: "auto",
+        "@media(max-width: 600px)": {
+            padding: "40% 14% 5% 14%",
+        }
     },
     servicesHeaderTextWrapper: {
         display: "flex",
@@ -52,7 +55,7 @@ const Services = () => {
     const classes = withStyles();
     return (
         <div id="services" className={classes.servicesWrapper}>
-            <div className={classes.servicesHeaderTextWrapper}>
+            <div  className={classes.servicesHeaderTextWrapper}>
                 <Typography className={classes.servicesHeader}>Our Services</Typography>
             </div>
             <div className={classes.servicesDescriptionWrapper}>

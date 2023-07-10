@@ -16,7 +16,7 @@ const withStyles = makeStyles(() => ({
         position: "fixed",
         top: 0,
         width: "100%",
-        zIndex: "2"
+        zIndex: "2",
     },
     navbarImage: {
         width: "200px",
@@ -141,18 +141,21 @@ const Nav = () => {
     return (
         <div className={classes.navbarWrapper}>
             <div>
-                <img
-                    className={classes.navbarImage}
-                    src={CloverLogo}
-                    alt="company logo"
-                />
+                <Button onClick={() => handleClick('#sectionOne')}>
+                    <img
+                        className={classes.navbarImage}
+                        src={CloverLogo}
+                        alt="company logo"
+                    />
+                </Button>
             </div>
             <div className={classes.navbarMenuWrapper}>
                 {/* TODO update handleClick id to new section name */}
                 <Button onClick={() => handleClick('#services')} className={classes.menuItem}>Services</Button>
+                <Button onClick={() => handleClick('#nursery')} className={classes.menuItem}>Nursery</Button>
                 <Button onClick={() => handleClick('#gallery')} className={classes.menuItem}>Gallery</Button>
                 <Button onClick={() => handleClick('#aboutUs')} className={classes.menuItem}>About Us</Button>
-                <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon/>&nbsp; Contact Us</Button>
+                <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon />&nbsp; Contact Us</Button>
             </div>
             <div className={classes.navBarHamburgerDrawerWrapper}>
                 <MenuIcon
@@ -175,21 +178,28 @@ const Nav = () => {
                             <ListItem
                                 className={classes.drawerItem}
                                 button
-                                onClick={() => handleClick('#howItWorks')}
+                                onClick={() => handleClick('#services')}
                             >
                                 <ListItemText primary={"Services"} />
                             </ListItem>
                             <ListItem
                                 className={classes.drawerItem}
                                 button
-                                onClick={() => handleClick('#howItWorks')}
+                                onClick={() => handleClick('#nursery')}
+                            >
+                                <ListItemText primary={"Nursery"} />
+                            </ListItem>
+                            <ListItem
+                                className={classes.drawerItem}
+                                button
+                                onClick={() => handleClick('#gallery')}
                             >
                                 <ListItemText primary={"Gallery"} />
                             </ListItem>
                             <ListItem
                                 className={classes.drawerItem}
                                 button
-                                onClick={() => handleClick('#howItWorks')}
+                                onClick={() => handleClick('#aboutUs')}
                             >
                                 <ListItemText primary={"About Us"} />
                             </ListItem>

@@ -8,6 +8,8 @@ import SectionTwo from './components/SectionTwo';
 import SectionThree from './components/SectionThree';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
+import Nursery from './components/Nursery';
+import ContactUs from './components/ContactUs';
 
 const cloverTheme = createMuiTheme({
   typography: {
@@ -39,7 +41,9 @@ function App() {
           <AboutUs />
           <SectionTwo />
           <Services />
+          <Nursery/>
           <SectionThree />
+          <ContactUs/>
         </Layout>
       </div>
     </ThemeProvider>

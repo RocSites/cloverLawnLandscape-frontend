@@ -57,7 +57,10 @@ const withStyles = makeStyles(() => ({
         gridTemplateRows: "300px 300px 300px",
         gridTemplateColumns: "300px 300px 300px",
         gridGap: "50px",
-        zIndex: "1"
+        zIndex: "1",
+        "@media(max-width: 600px)": {
+            display: "block"
+          }
     },
     sectionTwoHeaderTextWrapper: {
         display: "flex",

@@ -14,7 +14,10 @@ const withStyles = makeStyles(() => ({
     justifyContent: "center",
     // background: "#00704a",
     padding: "5% 14% 5% 14%",
-    margin: "auto"
+    margin: "auto",
+    "@media(max-width: 600px)": {
+      padding: "40% 14% 5% 14%",
+  }
   },
   sectionThreeHeaderTextWrapper: {
     display: "flex",
@@ -40,6 +43,9 @@ const withStyles = makeStyles(() => ({
       gridTemplateColumns: "300px 300px 300px",
       gridGap: "50px",
       zIndex: "1",
+      "@media(max-width: 600px)": {
+        display: "block"
+      }
   },
   galleryImage: {
     height: "300px",
