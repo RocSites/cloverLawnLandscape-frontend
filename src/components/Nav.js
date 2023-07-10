@@ -205,7 +205,7 @@ const Nav = () => {
                             </ListItem>
                             <Button
                                 className={classes.drawerItemLogin}
-                                target="_blank" href=""
+                                target="_blank" href="tel:(585) 244-1626"
                             >
                                 Contact Us
                             </Button>
