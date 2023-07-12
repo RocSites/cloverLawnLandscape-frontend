@@ -18,7 +18,9 @@ const withStyles = makeStyles(() => ({
     textAlign: "left",
     textTransform: "uppercase",
     "@media(max-width: 600px)": {
-      fontSize: "2rem"
+      fontSize: "2rem",
+      textAlign: "center",
+      marginBottom: "30px"
   }
   },
   aboutHeaderWrapper: {

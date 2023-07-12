@@ -37,19 +37,16 @@ const withStyles = makeStyles(() => ({
     }
   },
   galleryImageWrapper: {
-      display: "grid",
-      justifyContent: "center",
-      gridTemplateRows: "300px",
-      gridTemplateColumns: "300px 300px 300px",
-      gridGap: "50px",
-      zIndex: "1",
-      "@media(max-width: 600px)": {
-        display: "block"
-      }
+    display: "grid",
+    color: "white",
+    justifyContent: "center",
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+    gridGap: "1em",
+    width: "100%",
   },
   galleryImage: {
-    height: "300px",
-    width: "300px"
+    width: "100%",
+    height: "300px"
   }
 
 }));

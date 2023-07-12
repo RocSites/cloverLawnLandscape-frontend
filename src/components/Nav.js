@@ -24,7 +24,7 @@ const withStyles = makeStyles(() => ({
     },
     navbarMenuWrapper: {
         display: "flex",
-        "@media(max-width: 600px)": {
+        "@media(max-width: 1050px)": {
             display: "none"
         }
     },
@@ -60,14 +60,15 @@ const withStyles = makeStyles(() => ({
     },
     navBarHamburgerDrawerWrapper: {
         display: "none",
-        "@media(max-width: 600px)": {
-            display: "flex"
+        "@media(max-width: 1050px)": {
+            display: "flex",
+            margin: "auto 10px"
         }
     },
     hamburgerIcon: {
         margin: "20px",
         fontSize: "2.5rem",
-        "@media(min-width: 601px)": {
+        "@media(min-width: 1051px)": {
             display: "none"
         }
     },
@@ -102,6 +103,9 @@ const withStyles = makeStyles(() => ({
             color: "black"
         }
 
+    },
+    drawerPhoneIcon: {
+        marginRight: "5px"
     },
     drawerItemContact: {
         fontSize: "1rem",
@@ -153,9 +157,10 @@ const Nav = () => {
                 {/* TODO update handleClick id to new section name */}
                 <Button onClick={() => handleClick('#services')} className={classes.menuItem}>Services</Button>
                 <Button onClick={() => handleClick('#nursery')} className={classes.menuItem}>Nursery</Button>
+                <Button onClick={() => handleClick('#gentles')} className={classes.menuItem}>Gentles Farm Market</Button>
                 <Button onClick={() => handleClick('#gallery')} className={classes.menuItem}>Gallery</Button>
                 <Button onClick={() => handleClick('#aboutUs')} className={classes.menuItem}>About Us</Button>
-                <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon />&nbsp; Contact Us</Button>
+                <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon />&nbsp; Call Us</Button>
             </div>
             <div className={classes.navBarHamburgerDrawerWrapper}>
                 <MenuIcon
@@ -192,6 +197,13 @@ const Nav = () => {
                             <ListItem
                                 className={classes.drawerItem}
                                 button
+                                onClick={() => handleClick('#gentles')}
+                            >
+                                <ListItemText primary={"Gentles Farm Market"} />
+                            </ListItem>
+                            <ListItem
+                                className={classes.drawerItem}
+                                button
                                 onClick={() => handleClick('#gallery')}
                             >
                                 <ListItemText primary={"Gallery"} />
@@ -207,7 +219,8 @@ const Nav = () => {
                                 className={classes.drawerItemLogin}
                                 target="_blank" href="tel:(585) 244-1626"
                             >
-                                Contact Us
+                            <PhoneIcon className={classes.drawerPhoneIcon} />
+                                Call Us
                             </Button>
                         </List>
                     </div>

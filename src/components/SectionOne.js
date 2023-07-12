@@ -28,7 +28,8 @@ const withStyles = makeStyles((theme) => ({
         color: "white",
         textTransform: "uppercase",
         "@media(max-width: 600px)": {
-            fontSize: "2rem"
+            fontSize: "2rem",
+            textAlign: "center"
         }
     },
     sectionOneHeaderLower: {

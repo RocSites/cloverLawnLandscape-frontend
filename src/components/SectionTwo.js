@@ -15,7 +15,6 @@ const withStyles = makeStyles(() => ({
         padding: "5% 14% 5% 14%",
         margin: "auto",
         background: "black",
-        height: "500px",
         "@media(max-width: 600px)": {
             flexDirection: "column",
             height: "auto"
@@ -50,17 +49,8 @@ const withStyles = makeStyles(() => ({
         maxHeight: "500px"
     },
     sectionTwoImage: {
-        width: "100%"
-    },
-    sectionTwoContentWrapper: {
-        display: "grid",
-        gridTemplateRows: "300px 300px 300px",
-        gridTemplateColumns: "300px 300px 300px",
-        gridGap: "50px",
-        zIndex: "1",
-        "@media(max-width: 600px)": {
-            display: "block"
-          }
+        width: "100%",
+        maxHeight: "300px"
     },
     sectionTwoHeaderTextWrapper: {
         display: "flex",
@@ -71,7 +61,8 @@ const withStyles = makeStyles(() => ({
         position: "relative",
         textAlign: "center",
         color: "white",
-        display: "flex"
+        display: "flex",
+        height: "300px"
     },
     centerText: {
         position: "absolute",
@@ -100,9 +91,19 @@ const withStyles = makeStyles(() => ({
         }
     },
     sectionOneSubheader: {
-        fontSize: "1.25rem",
+        fontSize: "1rem",
         textAlign: "left",
         color: "white"
+    },
+    sectionTwoContainer: {
+        display: "grid",
+        color: "white",
+        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        gridGap: "1em",
+        width: "100%",
+        "& *": {
+            color: "white"
+        }
     }
 
 }));
@@ -137,7 +138,7 @@ const SectionTwo = () => {
                     <Typography className={classes.sectionOneSubheader}>Designed and executed just for you by our talented team of landscape architects and construction professionals.</Typography>
                 </div>
             </div>
-            <div className={classes.sectionTwoContentWrapper}>
+            <div className={classes.sectionTwoContainer}>
                 <div className={classes.sectionTwoContentTextWrapper}
                     onMouseEnter={handleShowServicesDetail("hardscaping", true)}
                     onMouseLeave={handleShowServicesDetail("hardscaping", false)}
@@ -215,9 +216,7 @@ const SectionTwo = () => {
                         </div>
                     )}
                 </div>
-
             </div>
-
         </div>
     )
 }
