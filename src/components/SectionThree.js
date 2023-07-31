@@ -1,11 +1,5 @@
 import { Typography, makeStyles } from '@material-ui/core';
 import React, { useEffect, useState } from 'react'
-import FireplaceOne from '../assets/patio_fire_three.jpeg'
-import RockWallOne from '../assets/wall_multch_three.jpeg'
-import WalkwayOne from '../assets/walkway_three_white_house.jpeg'
-import PaversOne from '../assets/walkway_one_house.jpeg'
-import PaversTwo from '../assets/walkway_two.jpeg'
-import RockWallTwo from '../assets/wall_three.jpeg'
 import axios from "axios"
 
 const withStyles = makeStyles(() => ({
@@ -70,8 +64,6 @@ const SectionThree = () => {
   }, [])
 
   const formatImages = (resp) => {
-    console.log(resp)
-    console.log("format images function fired")
     let dataArr = resp.data.map(x => x.attributes.image.data);
     setGalleryUrls(dataArr.map(obj => obj.attributes.formats.small.url))
   }
