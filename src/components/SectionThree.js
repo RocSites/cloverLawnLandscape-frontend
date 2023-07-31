@@ -1,11 +1,12 @@
 import { Typography, makeStyles } from '@material-ui/core';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FireplaceOne from '../assets/patio_fire_three.jpeg'
 import RockWallOne from '../assets/wall_multch_three.jpeg'
 import WalkwayOne from '../assets/walkway_three_white_house.jpeg'
 import PaversOne from '../assets/walkway_one_house.jpeg'
 import PaversTwo from '../assets/walkway_two.jpeg'
 import RockWallTwo from '../assets/wall_three.jpeg'
+import axios from "axios"
 
 const withStyles = makeStyles(() => ({
   sectionThreeWrapper: {
@@ -17,7 +18,7 @@ const withStyles = makeStyles(() => ({
     margin: "auto",
     "@media(max-width: 600px)": {
       padding: "40% 14% 5% 14%",
-  }
+    }
   },
   sectionThreeHeaderTextWrapper: {
     display: "flex",
@@ -53,19 +54,38 @@ const withStyles = makeStyles(() => ({
 const SectionThree = () => {
 
   const classes = withStyles();
+
+  const [response, setResponse] = useState([]);
+  const [galleryUrls, setGalleryUrls] = useState([]);
+
+  const baseURL = "https://clover-strapi-qxtpiid5ka-ue.a.run.app/api/gallary-cards?populate=*"
+
+  useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setResponse(response.data);
+      if (response.data.data.length > 0) {
+        formatImages(response.data)
+      }
+    });
+  }, [])
+
+  const formatImages = (resp) => {
+    console.log(resp)
+    console.log("format images function fired")
+    let dataArr = resp.data.map(x => x.attributes.image.data);
+    setGalleryUrls(dataArr.map(obj => obj.attributes.formats.small.url))
+  }
+
   return (
     <div id="gallery" className={classes.sectionThreeWrapper}>
       <div className={classes.sectionThreeHeaderTextWrapper}>
         <Typography className={classes.sectionThreeHeader}>Recent Projects</Typography>
       </div>
       <div className={classes.galleryImageWrapper}>
-        <img className={classes.galleryImage} src={FireplaceOne}/>
-        <img className={classes.galleryImage} src={RockWallOne}/>
-        <img className={classes.galleryImage} src={WalkwayOne}/>
-        <img className={classes.galleryImage} src={PaversOne}/>
-        <img className={classes.galleryImage} src={PaversTwo}/>
-        <img className={classes.galleryImage} src={RockWallTwo}/>
-      
+        {galleryUrls.length > 0 ? galleryUrls.map(url => (
+          <img className={classes.galleryImage} src={url} />
+        ))  : null}
+
       </div>
     </div>
   )
