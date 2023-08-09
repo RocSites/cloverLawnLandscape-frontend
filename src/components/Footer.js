@@ -4,7 +4,7 @@ import { Typography, makeStyles } from '@material-ui/core';
 const withStyles = makeStyles(() => ({
     footerWrapper: {
         backgroundColor: "#00704a",
-        padding:"10px 0",
+        padding: "10px 0",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
@@ -22,8 +22,12 @@ const withStyles = makeStyles(() => ({
         color: "white"
     },
     rocsitesText: {
-        fontSize: "0.7rem",
+        fontSize: "0.9rem",
         color: "white",
+        fontFamily: "Nunito",
+        "@media(max-width: 600px)": {
+            fontSize: "0.75rem"
+        }
     }
 
 }))
