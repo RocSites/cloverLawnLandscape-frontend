@@ -103,6 +103,9 @@ const withStyles = makeStyles(() => ({
         width: "100%",
         "& *": {
             color: "white"
+        },
+        "@media(max-width: 600px)": {
+            width: "120%",
         }
     }
 
@@ -120,7 +123,6 @@ const SectionTwo = () => {
     // TODO - fix hover state mixup on second and third tiles
     // TODO - add clsx for when service details are displayed (add gray/white color and background). Add scroll up for this transition later
     const handleShowServicesDetail = (serviceName, enabled) => (e) => {
-        console.log(serviceName);
         if (serviceName === "hardscaping") {
             setShowHardScapeText(enabled)
         } else if (serviceName === "landscaping") {

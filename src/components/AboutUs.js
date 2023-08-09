@@ -8,7 +8,7 @@ const withStyles = makeStyles(() => ({
     background: "#00704a",
     padding: "5% 14% 5% 14%",
     "@media(max-width: 600px)": {
-      padding: "40% 14% 5% 14%",
+      padding: "40% 8% 5% 8%",
   }
   },
   aboutUsHeader: {

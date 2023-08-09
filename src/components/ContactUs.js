@@ -56,7 +56,7 @@ const withStyles = makeStyles(() => ({
         color: "white",
         borderRadius: "35px",
         height: "35px",
-        margin: "auto",
+        margin: "15px auto",
         padding: "20px",
         marginRight: "10px",
         "&:hover": {
@@ -67,6 +67,11 @@ const withStyles = makeStyles(() => ({
             fontSize: "1rem;"
         }
     },
+    mapWrapper: {
+        display: "flex",
+        justifyContent: "center",
+        margin: "40px"
+    }
 
 }));
 const Nursery = () => {
@@ -83,8 +88,11 @@ const Nursery = () => {
             <br />
             <br />
             <div>
-                <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon />&nbsp; Call Us</Button>
+                <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon />&nbsp; (585) 244-1626</Button>
                 <Button href="mailto:doug@clovernursery.com?subject=Website Inquiry" className={classes.contactUsButton}><EmailIcon />&nbsp; Email Us</Button>
+            </div>
+            <div className={classes.mapWrapper}>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11643.780747022722!2d-77.5287248!3d43.1476803!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d6ca58ff1393df%3A0x550c3c4ac30e89e9!2sClover%20Lawn%20and%20Landscape.!5e0!3m2!1sen!2sus!4v1691610626147!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <br />
             <br />

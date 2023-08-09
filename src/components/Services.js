@@ -40,6 +40,7 @@ const withStyles = makeStyles(() => ({
         color: "white",
         textAlign: "left",
         fontFamily: "Nunito",
+        paddingInlineStart: "25px",
         "& li": {
             margin: "15px 0"
         }

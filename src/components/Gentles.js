@@ -83,7 +83,7 @@ const Gentles = () => {
                 </Typography>
                 <Button href="https://www.gentlesfarm.com/contact/" target="_blank" className={classes.contactUsButtonLink}>&nbsp; Come See Us! </Button>
             </div>
-            <Button href="tel:(585) 385-9843" className={classes.contactUsButton}><PhoneIcon />&nbsp; Call </Button>
+            <Button href="tel:(585) 385-9843" className={classes.contactUsButton}><PhoneIcon />&nbsp; (585) 385-9843 </Button>
 
 
         </div>

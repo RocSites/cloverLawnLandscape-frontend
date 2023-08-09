@@ -77,7 +77,7 @@ const Nursery = () => {
             <div className={classes.servicesHeaderTextWrapper}>
                 <Typography className={classes.servicesHeader}>Nursery & Garden Center</Typography>
             </div>
-            <Button href="tel:(585) 482-5372" className={classes.contactUsButton}><PhoneIcon />&nbsp; Nursery & Garden Center </Button>
+            <Button href="tel:(585) 482-5372" className={classes.contactUsButton}><PhoneIcon />&nbsp; (585) 482-5372 </Button>
 
             <div className={classes.servicesDescriptionWrapper}>
                 <Typography className={classes.servicesParagraph}>
