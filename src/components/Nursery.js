@@ -67,6 +67,9 @@ const withStyles = makeStyles(() => ({
             fontSize: "1rem;"
         }
     },
+    phoneText: {
+        color: "#4caf50"
+    }
 
 }));
 const Nursery = () => {
@@ -87,7 +90,7 @@ const Nursery = () => {
             <br/>
             <div className={classes.servicesDescriptionWrapper}>
                 <Typography className={classes.servicesParagraph}>
-                    We realized long ago that the only way to truly provide the very best landscaping services possible was to own and operate our own nursery. Founded in 1928, it's the oldest nursery in Monroe County, and we've opened our doors to the public 7 days a week. We invite you call us at <a href="tel:(585) 482-5372">(585) 482-5372</a> , or just stop in to experience all that this unique nursery has to offer, including:</Typography>
+                    We realized long ago that the only way to truly provide the very best landscaping services possible was to own and operate our own nursery. Founded in 1928, it's the oldest nursery in Monroe County, and we've opened our doors to the public 7 days a week. We invite you call us at <a className={classes.phoneText} href="tel:(585) 482-5372">(585) 482-5372</a> , or just stop in to experience all that this unique nursery has to offer, including:</Typography>
             </div>
 
             <div className={classes.servicesListWrapper}>
