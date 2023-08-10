@@ -28,6 +28,9 @@ const withStyles = makeStyles(() => ({
         "@media(max-width: 600px)": {
             fontSize: "0.75rem"
         }
+    },
+    rocsitesLink: {
+        color: "white"
     }
 
 }))
@@ -40,7 +43,7 @@ const Footer = () => {
             <Typography className={classes.cloverCopyright}> &copy; {new Date().getFullYear()} Clover Lawn & Landscape. All Rights Reserved.</Typography>
             <Typography className={classes.cloverCopyright}>485 N Landing Rd North, Rochester, NY 14625</Typography>
             <a className={classes.footerPhone} href="tel:(585) 244-1626">(585) 244-1626</a>
-            <p className={classes.rocsitesText}>Website created and maintained by <span><a href="https://www.rocsites.com/" target="_blank">RocSites</a></span></p>
+            <p className={classes.rocsitesText}>Website created and maintained by <span><a className={classes.rocsitesLink} href="https://www.rocsites.com/" target="_blank">RocSites</a></span></p>
         </div>
     )
 }
