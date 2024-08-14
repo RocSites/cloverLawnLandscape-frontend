@@ -159,8 +159,6 @@ const Nav = (props) => {
                     <div className={classes.navbarMenuWrapper}>
                         {/* TODO update handleClick id to new section name */}
                         <Button onClick={() => handleClick('#services')} className={classes.menuItem}>Services</Button>
-                        <Button onClick={() => handleClick('#nursery')} className={classes.menuItem}>Nursery</Button>
-                        <Button onClick={() => handleClick('#gentles')} className={classes.menuItem}>Gentles Farm Market</Button>
                         <Button onClick={() => handleClick('#gallery')} className={classes.menuItem}>Gallery</Button>
                         <Button onClick={() => handleClick('#aboutUs')} className={classes.menuItem}>About Us</Button>
                         <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon />&nbsp; Call Us</Button>
@@ -190,20 +188,7 @@ const Nav = (props) => {
                                     >
                                         <ListItemText primary={"Services"} />
                                     </ListItem>
-                                    <ListItem
-                                        className={classes.drawerItem}
-                                        button
-                                        onClick={() => handleClick('#nursery')}
-                                    >
-                                        <ListItemText primary={"Nursery"} />
-                                    </ListItem>
-                                    <ListItem
-                                        className={classes.drawerItem}
-                                        button
-                                        onClick={() => handleClick('#gentles')}
-                                    >
-                                        <ListItemText primary={"Gentles Farm Market"} />
-                                    </ListItem>
+                    
                                     <ListItem
                                         className={classes.drawerItem}
                                         button
@@ -276,20 +261,6 @@ const Nav = (props) => {
                                     onClick={() => handleClick('#services')}
                                 >
                                     <ListItemText primary={"Services"} />
-                                </ListItem>
-                                <ListItem
-                                    className={classes.drawerItem}
-                                    button
-                                    onClick={() => handleClick('#nursery')}
-                                >
-                                    <ListItemText primary={"Nursery"} />
-                                </ListItem>
-                                <ListItem
-                                    className={classes.drawerItem}
-                                    button
-                                    onClick={() => handleClick('#gentles')}
-                                >
-                                    <ListItemText primary={"Gentles Farm Market"} />
                                 </ListItem>
                                 <ListItem
                                     className={classes.drawerItem}

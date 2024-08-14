@@ -49,9 +49,6 @@ function App() {
 
     <Router>
       <div className="App">
-
-
-        <hr />
         <Routes>
           <Route path="/" element={<Landing />}>
           </Route>
