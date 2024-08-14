@@ -7,6 +7,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import PhoneIcon from '@mui/icons-material/Phone';
+import {Link} from "react-router-dom";
 
 const withStyles = makeStyles(() => ({
     navbarWrapper: {
@@ -128,7 +129,7 @@ const withStyles = makeStyles(() => ({
 
 }));
 
-const Nav = () => {
+const Nav = (props) => {
 
     const classes = withStyles();
 
@@ -144,88 +145,180 @@ const Nav = () => {
     }
     return (
         <div className={classes.navbarWrapper}>
-            <div>
-                <Button onClick={() => handleClick('#sectionOne')}>
-                    <img
-                        className={classes.navbarImage}
-                        src={CloverLogo}
-                        alt="company logo"
-                    />
-                </Button>
-            </div>
-            <div className={classes.navbarMenuWrapper}>
-                {/* TODO update handleClick id to new section name */}
-                <Button onClick={() => handleClick('#services')} className={classes.menuItem}>Services</Button>
-                <Button onClick={() => handleClick('#nursery')} className={classes.menuItem}>Nursery</Button>
-                <Button onClick={() => handleClick('#gentles')} className={classes.menuItem}>Gentles Farm Market</Button>
-                <Button onClick={() => handleClick('#gallery')} className={classes.menuItem}>Gallery</Button>
-                <Button onClick={() => handleClick('#aboutUs')} className={classes.menuItem}>About Us</Button>
-                <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon />&nbsp; Call Us</Button>
-            </div>
-            <div className={classes.navBarHamburgerDrawerWrapper}>
-                <MenuIcon
-                    className={classes.hamburgerIcon}
-                    onClick={toggleDrawer}
-                />
-                <Drawer
-                    open={openDrawer}
-                    onClose={toggleDrawer}
-                    anchor="right"
-                    className={classes.drawerRoot}
-                >
-                    <div
-                        className={classes.list}
-                        role="presentation"
-                        onClick={toggleDrawer}
-                        onKeyDown={toggleDrawer}
-                    >
-                        <List>
-                            <ListItem
-                                className={classes.drawerItem}
-                                button
-                                onClick={() => handleClick('#services')}
-                            >
-                                <ListItemText primary={"Services"} />
-                            </ListItem>
-                            <ListItem
-                                className={classes.drawerItem}
-                                button
-                                onClick={() => handleClick('#nursery')}
-                            >
-                                <ListItemText primary={"Nursery"} />
-                            </ListItem>
-                            <ListItem
-                                className={classes.drawerItem}
-                                button
-                                onClick={() => handleClick('#gentles')}
-                            >
-                                <ListItemText primary={"Gentles Farm Market"} />
-                            </ListItem>
-                            <ListItem
-                                className={classes.drawerItem}
-                                button
-                                onClick={() => handleClick('#gallery')}
-                            >
-                                <ListItemText primary={"Gallery"} />
-                            </ListItem>
-                            <ListItem
-                                className={classes.drawerItem}
-                                button
-                                onClick={() => handleClick('#aboutUs')}
-                            >
-                                <ListItemText primary={"About Us"} />
-                            </ListItem>
-                            <Button
-                                className={classes.drawerItemLogin}
-                                target="_blank" href="tel:(585) 244-1626"
-                            >
-                            <PhoneIcon className={classes.drawerPhoneIcon} />
-                                Call Us
-                            </Button>
-                        </List>
+            {props.business === "landscape" ? (
+                <>
+                    <div>
+                        <Link to="/">
+                            <img
+                                className={classes.navbarImage}
+                                src={CloverLogo}
+                                alt="company logo"
+                            />
+                        </Link>
                     </div>
-                </Drawer>
-            </div>
+                    <div className={classes.navbarMenuWrapper}>
+                        {/* TODO update handleClick id to new section name */}
+                        <Button onClick={() => handleClick('#services')} className={classes.menuItem}>Services</Button>
+                        <Button onClick={() => handleClick('#nursery')} className={classes.menuItem}>Nursery</Button>
+                        <Button onClick={() => handleClick('#gentles')} className={classes.menuItem}>Gentles Farm Market</Button>
+                        <Button onClick={() => handleClick('#gallery')} className={classes.menuItem}>Gallery</Button>
+                        <Button onClick={() => handleClick('#aboutUs')} className={classes.menuItem}>About Us</Button>
+                        <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon />&nbsp; Call Us</Button>
+                    </div>
+                    <div className={classes.navBarHamburgerDrawerWrapper}>
+                        <MenuIcon
+                            className={classes.hamburgerIcon}
+                            onClick={toggleDrawer}
+                        />
+                        <Drawer
+                            open={openDrawer}
+                            onClose={toggleDrawer}
+                            anchor="right"
+                            className={classes.drawerRoot}
+                        >
+                            <div
+                                className={classes.list}
+                                role="presentation"
+                                onClick={toggleDrawer}
+                                onKeyDown={toggleDrawer}
+                            >
+                                <List>
+                                    <ListItem
+                                        className={classes.drawerItem}
+                                        button
+                                        onClick={() => handleClick('#services')}
+                                    >
+                                        <ListItemText primary={"Services"} />
+                                    </ListItem>
+                                    <ListItem
+                                        className={classes.drawerItem}
+                                        button
+                                        onClick={() => handleClick('#nursery')}
+                                    >
+                                        <ListItemText primary={"Nursery"} />
+                                    </ListItem>
+                                    <ListItem
+                                        className={classes.drawerItem}
+                                        button
+                                        onClick={() => handleClick('#gentles')}
+                                    >
+                                        <ListItemText primary={"Gentles Farm Market"} />
+                                    </ListItem>
+                                    <ListItem
+                                        className={classes.drawerItem}
+                                        button
+                                        onClick={() => handleClick('#gallery')}
+                                    >
+                                        <ListItemText primary={"Gallery"} />
+                                    </ListItem>
+                                    <ListItem
+                                        className={classes.drawerItem}
+                                        button
+                                        onClick={() => handleClick('#aboutUs')}
+                                    >
+                                        <ListItemText primary={"About Us"} />
+                                    </ListItem>
+                                    <Button
+                                        className={classes.drawerItemLogin}
+                                        target="_blank" href="tel:(585) 244-1626"
+                                    >
+                                        <PhoneIcon className={classes.drawerPhoneIcon} />
+                                        Call Us
+                                    </Button>
+                                </List>
+                            </div>
+                        </Drawer>
+                    </div>
+                </>
+            ) : null}
+
+            {props.business === "nursery" ? (
+                <>
+                <div>
+                    <Link to="/">
+                    Nursery Logo
+                        {/* <img
+                            className={classes.navbarImage}
+                            src={CloverLogo}
+                            alt="company logo"
+                        /> */}
+                    </Link>
+                </div>
+                {/* <div className={classes.navbarMenuWrapper}>
+                    <Button onClick={() => handleClick('#services')} className={classes.menuItem}>Services</Button>
+                    <Button onClick={() => handleClick('#nursery')} className={classes.menuItem}>Nursery</Button>
+                    <Button onClick={() => handleClick('#gentles')} className={classes.menuItem}>Gentles Farm Market</Button>
+                    <Button onClick={() => handleClick('#gallery')} className={classes.menuItem}>Gallery</Button>
+                    <Button onClick={() => handleClick('#aboutUs')} className={classes.menuItem}>About Us</Button>
+                    <Button href="tel:(585) 244-1626" className={classes.contactUsButton}><PhoneIcon />&nbsp; Call Us</Button>
+                </div> */}
+                <div className={classes.navBarHamburgerDrawerWrapper}>
+                    <MenuIcon
+                        className={classes.hamburgerIcon}
+                        onClick={toggleDrawer}
+                    />
+                    <Drawer
+                        open={openDrawer}
+                        onClose={toggleDrawer}
+                        anchor="right"
+                        className={classes.drawerRoot}
+                    >
+                        <div
+                            className={classes.list}
+                            role="presentation"
+                            onClick={toggleDrawer}
+                            onKeyDown={toggleDrawer}
+                        >
+                            <List>
+                                <ListItem
+                                    className={classes.drawerItem}
+                                    button
+                                    onClick={() => handleClick('#services')}
+                                >
+                                    <ListItemText primary={"Services"} />
+                                </ListItem>
+                                <ListItem
+                                    className={classes.drawerItem}
+                                    button
+                                    onClick={() => handleClick('#nursery')}
+                                >
+                                    <ListItemText primary={"Nursery"} />
+                                </ListItem>
+                                <ListItem
+                                    className={classes.drawerItem}
+                                    button
+                                    onClick={() => handleClick('#gentles')}
+                                >
+                                    <ListItemText primary={"Gentles Farm Market"} />
+                                </ListItem>
+                                <ListItem
+                                    className={classes.drawerItem}
+                                    button
+                                    onClick={() => handleClick('#gallery')}
+                                >
+                                    <ListItemText primary={"Gallery"} />
+                                </ListItem>
+                                <ListItem
+                                    className={classes.drawerItem}
+                                    button
+                                    onClick={() => handleClick('#aboutUs')}
+                                >
+                                    <ListItemText primary={"About Us"} />
+                                </ListItem>
+                                <Button
+                                    className={classes.drawerItemLogin}
+                                    target="_blank" href="tel:(585) 244-1626"
+                                >
+                                    <PhoneIcon className={classes.drawerPhoneIcon} />
+                                    Call Us
+                                </Button>
+                            </List>
+                        </div>
+                    </Drawer>
+                </div>
+            </>
+            ): null}
+
         </div>
     )
 }
