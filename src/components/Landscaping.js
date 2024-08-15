@@ -15,7 +15,7 @@ const Landscaping = () => {
             <SectionTwo />
             <Services />
             <SectionThree />
-            <ContactUs />
+            <ContactUs business="landscape"/>
         </Layout>
     )
 }

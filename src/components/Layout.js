@@ -7,7 +7,7 @@ const Layout = (props) => {
         <>
             <Nav business={props.business}/>
             <div>{props.children}</div>
-            <Footer/>
+            <Footer business={props.business}/>
         </>
     )
 }

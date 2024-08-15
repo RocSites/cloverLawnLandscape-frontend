@@ -105,6 +105,28 @@ const withStyles = makeStyles(() => ({
         }
 
     },
+    drawerItemLoginNursery: {
+        display: "flex",
+        backgroundColor: "#1783c0",
+        padding: "8px 16px",
+        width: "100%",
+        borderRadius: "0px",
+        "& span": {
+            textTransform: "none",
+            fontSize: "1rem",
+            color: "#ffffff",
+            justifyContent: "flex-start"
+        },
+        "&:hover": {
+            backgroundColor: "#6db0a7",
+            color: "black"
+        },
+        "&:selected:hover": {
+            backgroundImage: "#6db0a7",
+            color: "black"
+        }
+
+    },
     drawerPhoneIcon: {
         marginRight: "5px"
     },
@@ -221,12 +243,11 @@ const Nav = (props) => {
                 <>
                 <div>
                     <Link to="/">
-                    Nursery Logo
-                        {/* <img
+                        <img
                             className={classes.navbarImage}
                             src={CloverLogo}
                             alt="company logo"
-                        /> */}
+                        />
                     </Link>
                 </div>
                 {/* <div className={classes.navbarMenuWrapper}>
@@ -255,7 +276,7 @@ const Nav = (props) => {
                             onKeyDown={toggleDrawer}
                         >
                             <List>
-                                <ListItem
+                                {/* <ListItem
                                     className={classes.drawerItem}
                                     button
                                     onClick={() => handleClick('#services')}
@@ -275,10 +296,10 @@ const Nav = (props) => {
                                     onClick={() => handleClick('#aboutUs')}
                                 >
                                     <ListItemText primary={"About Us"} />
-                                </ListItem>
+                                </ListItem> */}
                                 <Button
-                                    className={classes.drawerItemLogin}
-                                    target="_blank" href="tel:(585) 244-1626"
+                                    className={classes.drawerItemLoginNursery}
+                                    target="_blank" href="tel:(585) 482-5372"
                                 >
                                     <PhoneIcon className={classes.drawerPhoneIcon} />
                                     Call Us

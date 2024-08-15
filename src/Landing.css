@@ -14,7 +14,8 @@
     -webkit-clip-path: polygon(0 0, calc(100% - 10vh) 0, 100% 100%, 0 100%);
     margin-right: -4.2vh;
     padding: 5px 11vh 5px 5px;
-    background-color: #1783c0;
+    background-color: transparent;
+    background-image: url('./assets/clover_nursery.jpg');
     text-align: center;
 }
 
@@ -27,20 +28,66 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, calc(0% + 10vh) 100%);
     margin-left: -4.2vh;
     padding: 5px 5px 5px 11vh;
-    background-color: #00704a;
+    background-color: transparent;
+    background-image: url('./assets/petar-tonchev-c-5-QE5kBYk-unsplash.jpg');
     text-align: center;
 }
 
 .landingButton {
-    height: 140px;
-    width: 50%;
-    border-radius: 16px;
+    padding: 2rem;
+    border-radius: 35px;
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 3rem;
+    background-color: #00704a;
+    opacity: 0.9;
+    color: white;
+}
+
+.landingButtonNursery {
+    padding: 2rem;
+    border-radius: 35px;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 3rem;
+    background-color: #1783c0;
+    opacity: 0.9;
+    color: white;
 }
 
 #mobile-diagonal {
     display: none;
+}
+
+.phoneButton {
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    border-radius: 35px;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.phoneButton :hover {
+    background-color: #6db0a7;
+};
+.phoneButton > span {
+    text-transform: none;
+    font-size: 1rem;
+}
+
+.phoneButton > svg {
+    margin-top: 5px;
+    transform: scale(1.25);
+}
+
+.cloverLogo {
+    width: 200px;
+    margin: 10px;
 }
 
 @media (max-width: 600px) {
@@ -53,25 +100,36 @@
         width: 100%;
         height: 50%;
         margin: auto;
-        clip-path: none;
+        /* clip-path: none; */
         padding: 0px;
         -webkit-clip-path: none;
-        transform: skewY(15deg);
+        /* transform: skewY(15deg); */
     }
 
-    #mobile-diagonal {
+    /* #mobile-diagonal {
         display: flex;
         transform: skewY(15deg);
         height: 10px;
         background: #ffffff;
-    }
+    } */
 
     #landing-area {
         background-color: #00704a;
     }
 
-    .landingButton {
-        transform: skewY(-15deg)
+    .landingButton, .landingButtonNursery {
+        width: 95%;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    .cloverLogo {
+        margin-top: 50px;
+    }
+
+    .phoneButton {
+        margin: 20px;
+        font-size: 1.75rem;
     }
 
 }

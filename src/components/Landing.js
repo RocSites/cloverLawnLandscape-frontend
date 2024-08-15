@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import '../Landing.css'
+import PhoneIcon from '@mui/icons-material/Phone';
+import CloverLogo from '../assets/clover_logo.png'
+
 
 const Landing = () => {
 
@@ -8,16 +11,37 @@ const Landing = () => {
         <div id="landing-area">
             <div id="box-left">
                 <Link to="/nursery">
-                    <button class="landingButton">
-                        Nursery - Topsoil/Mulch Delivery
+                    <img
+                        class="cloverLogo"
+                        src={CloverLogo}
+                        alt="company logo"
+                    />
+                </Link>
+                <Link to="/nursery">
+                    <button class="landingButtonNursery">
+                        Clover Nursery - Topsoil/Mulch Delivery
                     </button>
                 </Link>
+                <a href="tel:(585) 482-5372" class="phoneButton">
+                    <PhoneIcon />&nbsp;
+                    (585) 482-5372
+                </a>
             </div>
-            <div id="mobile-diagonal"></div>
             <div id="box-right">
                 <Link to="/landscape">
-                    <button class="landingButton">Landscape Division</button>
+                    <img
+                        class="cloverLogo"
+                        src={CloverLogo}
+                        alt="company logo"
+                    />
                 </Link>
+                <Link to="/landscape">
+                    <button class="landingButton">Clover Landscape Division</button>
+                </Link>
+                <a href="tel:(585) 482-5372" class="phoneButton">
+                    <PhoneIcon />&nbsp;
+                    (585) 244-1626
+                </a>
             </div>
         </div>
 
