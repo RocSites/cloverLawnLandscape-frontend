@@ -5,9 +5,9 @@ import Footer from './Footer'
 const Layout = (props) => {
     return (
         <>
-            <Nav/>
+            <Nav business={props.business}/>
             <div>{props.children}</div>
-            <Footer/>
+            <Footer business={props.business}/>
         </>
     )
 }
