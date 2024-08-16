@@ -8,6 +8,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import PhoneIcon from '@mui/icons-material/Phone';
 import {Link} from "react-router-dom";
+import CloverNurseryLogo from '../assets/clover_nursery_logo.png'
+
 
 const withStyles = makeStyles(() => ({
     navbarWrapper: {
@@ -245,7 +247,7 @@ const Nav = (props) => {
                     <Link to="/">
                         <img
                             className={classes.navbarImage}
-                            src={CloverLogo}
+                            src={CloverNurseryLogo}
                             alt="company logo"
                         />
                     </Link>

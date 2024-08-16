@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import '../Landing.css'
 import PhoneIcon from '@mui/icons-material/Phone';
 import CloverLogo from '../assets/clover_logo.png'
-
+import CloverNurseryLogo from '../assets/clover_nursery_logo.png'
 
 const Landing = () => {
 
@@ -13,7 +13,7 @@ const Landing = () => {
                 <Link to="/nursery">
                     <img
                         class="cloverLogo"
-                        src={CloverLogo}
+                        src={CloverNurseryLogo}
                         alt="company logo"
                     />
                 </Link>
