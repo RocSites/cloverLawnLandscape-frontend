@@ -134,4 +134,8 @@
         height: 30px;
     }
 
+    #box-right {
+        border-top: 10px solid white;
+    }
+
 }
