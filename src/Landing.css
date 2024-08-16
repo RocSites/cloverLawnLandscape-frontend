@@ -98,7 +98,7 @@
     #box-left,
     #box-right {
         width: 100%;
-        height: 50%;
+        height: 50vh;
         margin: auto;
         /* clip-path: none; */
         padding: 0px;
