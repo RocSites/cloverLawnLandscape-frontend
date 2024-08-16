@@ -65,11 +65,11 @@
     justify-content: center;
     text-decoration: none;
     align-items: center;
-    background-color: #000000;
     color: white;
     border-radius: 35px;
     padding: 20px;
     font-size: 2rem;
+    border: 1px solid black;
 }
 
 .phoneButton :hover {
@@ -88,6 +88,14 @@
 .cloverLogo {
     width: 200px;
     margin: 10px;
+}
+
+.nurseryPhoneButton {
+    background-color: #1783c0;
+}
+
+.landscapePhoneButton {
+    background-color: #00704a;
 }
 
 @media (max-width: 600px) {
@@ -121,6 +129,7 @@
         width: 95%;
         font-size: 2rem;
         padding: 1rem;
+        border: 1px solid black;
     }
 
     .cloverLogo {
