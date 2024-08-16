@@ -38,7 +38,7 @@ const Landing = () => {
                 <Link to="/landscape">
                     <button class="landingButton">Clover Landscape Division</button>
                 </Link>
-                <a href="tel:(585) 482-5372" class="phoneButton landscapePhoneButton">
+                <a href="tel:(585) 244-1626" class="phoneButton landscapePhoneButton">
                     <PhoneIcon />&nbsp;
                     (585) 244-1626
                 </a>
